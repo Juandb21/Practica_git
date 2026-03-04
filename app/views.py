@@ -20,3 +20,8 @@ def insert(request):
             db_data = Task(title=task_title, description=task_description)
             db_data.save()
     return HttpResponseRedirect(reverse('app:index'))
+
+def delete(request, task_id):
+    db_data = Task.objects.filter(id=task_id)
+    db_data.delete()
+    return HttpResponseRedirect(reverse('app:index'))

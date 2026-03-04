@@ -37,7 +37,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ data.title }}</h5>
                         <p class="card-text">{{ data.description }}</p>
-                        <a href="#" class="btn btn-primary">Actualizar</a>
+                        <a href="{% url 'app:update' data.id %}" class="btn btn-primary">Actualizar</a>
                         <a href="{% url 'app:delete' data.id %}" class="btn btn-danger">Eliminar</a>
                     </div>
                 </div>
